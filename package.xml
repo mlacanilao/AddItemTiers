@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Meta>
+  <title>Add Item Tiers</title>
+  <id>omegaplatinum.elin.additemtiers</id>
+  <author>OmegaPlatinum</author>
+  <loadPriority>100</loadPriority>
+  <description>
+    Adds star (★) or high grade (HG) tiers to items based on the player's luck stat.
+    プレイヤーの運ステータスに基づいて、アイテムにティアレベル（★）を追加します。
+
+    [h1] Features [/h1]
+    [list]
+    [*] Applies star (★) or high grade (HG) tiers to items at creation using the player's current luck.
+    [*] Does not affect items that already have a tier level.
+    [/list]
+
+    [h1] Compatibility [/h1]
+    This mod works with existing save files.
+
+    Supports Game Version: 0.23.129
+
+    [h1] 特徴 [/h1]
+    [list]
+    [*] プレイヤーの運ステータスに応じて、アイテム作成時にティア（★/HG）を適用します。
+    [*] すでにティアレベルを持つアイテムには影響しません。
+    [/list]
+
+    [h1] 互換性 [/h1]
+    このMODは既存のセーブデータと完全に互換性があります。
+
+    対応ゲームバージョン: 0.23.129
+  </description>
+  <tags>General,Balance</tags>
+  <visibility>Public</visibility>
+  <version>0.23.129</version>
+</Meta>
