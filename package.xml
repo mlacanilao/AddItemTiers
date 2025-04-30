@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Meta>
-  <title>Add Item Tiers</title>
+  <title>Add Equipment Tiers</title>
   <id>omegaplatinum.elin.additemtiers</id>
   <author>OmegaPlatinum</author>
   <loadPriority>100</loadPriority>
   <description>
-    Adds high grade (HG) tiers to items based on the player's luck stat.
-    プレイヤーの運ステータスに基づいて、アイテムにハイグレード（HG）ティアを追加します。
+    Adds high grade (HG) tiers to equipment based on the player's luck stat.
+    プレイヤーの運ステータスに基づいて、装備品にハイグレード（HG）ティアを追加します。
 
     [h1] Features [/h1]
     [list]
-    [*] Applies high grade (HG) tiers to items at creation using the player's current luck.
-    [*] Does not affect items that already have a tier level.
+    [*] Applies high grade (HG) tiers to equipment at creation using the player's current luck.
+    [*] Does not affect equipment that already has a tier level.
     [/list]
 
     [h1] Compatibility [/h1]
@@ -21,8 +21,8 @@
 
     [h1] 特徴 [/h1]
     [list]
-    [*] プレイヤーの運ステータスに応じて、アイテム作成時にハイグレード（HG）ティアを適用します。
-    [*] すでにティアレベルを持つアイテムには影響しません。
+    [*] プレイヤーの運ステータスに応じて、装備品作成時にハイグレード（HG）ティアを適用します。
+    [*] すでにティアレベルを持つ装備品には影響しません。
     [/list]
 
     [h1] 互換性 [/h1]

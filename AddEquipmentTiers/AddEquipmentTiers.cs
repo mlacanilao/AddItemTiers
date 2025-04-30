@@ -1,5 +1,7 @@
-﻿using BepInEx;
+﻿using System.Collections.Generic;
+using BepInEx;
 using HarmonyLib;
+using NPOI.SS.Formula.Functions;
 using UnityEngine;
 
 namespace AddItemTiers
@@ -12,9 +14,9 @@ namespace AddItemTiers
     }
 
     [BepInPlugin(GUID: ModInfo.Guid, Name: ModInfo.Name, Version: ModInfo.Version)]
-    internal class AddItemTiers : BaseUnityPlugin
+    internal class AddEquipmentTiers : BaseUnityPlugin
     {
-        internal static AddItemTiers Instance { get; private set; }
+        internal static AddEquipmentTiers Instance { get; private set; }
 
         private void Awake()
         {
@@ -29,32 +31,33 @@ namespace AddItemTiers
         }
     }
 
-    [HarmonyPatch(declaringType: typeof(ThingGen), methodName: nameof(ThingGen._Create))]
-    internal static class ThingGenPatch
+    [HarmonyPatch(declaringType: typeof(Card), methodName: nameof(Card.Create))]
+    internal static class CardPatch
     {
         [HarmonyPostfix]
-        public static void _CreatePostfix(Thing __result)
+        public static void CreatePostfix(Card __instance)
         {
-            if (__result == null ||
+            if (__instance == null ||
                 EClass.core.IsGameStarted == false)
             {
                 return;
             }
-            
-            if (__result.source?._origin == "fish" ||
-                __result.source?.category == "currency" ||
-                __result.tier != 0)
+
+            if (__instance.IsEquipment == false ||
+                __instance.sourceCard?._origin == "fish" ||
+                __instance.sourceCard?.category == "currency" ||
+                __instance.tier != 0)
             {
                 return;
             }
-            
+
             int luck = EClass.pc?.Evalue(ele: 78) ?? 0;
-            
+
             if (luck <= 0)
             {
                 return;
             }
-            
+
             int tier = Mathf.Min(
                 a: EClass.rnd(
                     a: EClass.rnd(
@@ -65,10 +68,10 @@ namespace AddItemTiers
                 ) / 50,
                 b: 3
             );
-            
+
             if (tier > 0)
             {
-                __result.SetTier(a: tier, setTraits: true);
+                __instance.SetTier(a: tier, setTraits: true);
             }
         }
     }
