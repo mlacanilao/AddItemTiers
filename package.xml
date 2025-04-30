@@ -5,12 +5,12 @@
   <author>OmegaPlatinum</author>
   <loadPriority>100</loadPriority>
   <description>
-    Adds star (★) or high grade (HG) tiers to items based on the player's luck stat.
-    プレイヤーの運ステータスに基づいて、アイテムにティアレベル（★）を追加します。
+    Adds high grade (HG) tiers to items based on the player's luck stat.
+    プレイヤーの運ステータスに基づいて、アイテムにハイグレード（HG）ティアを追加します。
 
     [h1] Features [/h1]
     [list]
-    [*] Applies star (★) or high grade (HG) tiers to items at creation using the player's current luck.
+    [*] Applies high grade (HG) tiers to items at creation using the player's current luck.
     [*] Does not affect items that already have a tier level.
     [/list]
 
@@ -21,7 +21,7 @@
 
     [h1] 特徴 [/h1]
     [list]
-    [*] プレイヤーの運ステータスに応じて、アイテム作成時にティア（★/HG）を適用します。
+    [*] プレイヤーの運ステータスに応じて、アイテム作成時にハイグレード（HG）ティアを適用します。
     [*] すでにティアレベルを持つアイテムには影響しません。
     [/list]
 

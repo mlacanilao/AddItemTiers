@@ -8,7 +8,7 @@ namespace AddItemTiers
     {
         internal const string Guid = "omegaplatinum.elin.additemtiers";
         internal const string Name = "Add Item Tiers";
-        internal const string Version = "1.0.0.0";
+        internal const string Version = "1.1.0.0";
     }
 
     [BepInPlugin(GUID: ModInfo.Guid, Name: ModInfo.Name, Version: ModInfo.Version)]
@@ -23,9 +23,9 @@ namespace AddItemTiers
             harmony.PatchAll();
         }
 
-        public static void Log(object message)
+        public static void Log(object payload)
         {
-            Instance.Logger.LogInfo(data: message);
+            Instance.Logger.LogInfo(data: payload);
         }
     }
 
@@ -41,7 +41,8 @@ namespace AddItemTiers
                 return;
             }
             
-            if (__result.source._origin == "fish" &&
+            if (__result.source?._origin == "fish" ||
+                __result.source?.category == "currency" ||
                 __result.tier != 0)
             {
                 return;
@@ -68,7 +69,6 @@ namespace AddItemTiers
             if (tier > 0)
             {
                 __result.SetTier(a: tier, setTraits: true);
-                AddItemTiers.Log(message: $"Set tier {tier} on item: {__result.Name} (luck={luck})");
             }
         }
     }
