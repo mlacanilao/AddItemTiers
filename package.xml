@@ -12,6 +12,7 @@
     [list]
     [*] Applies high grade (HG) tiers to equipment at creation using the player's current luck.
     [*] Does not affect equipment that already has a tier level.
+    [*] Increases certain traits such as Strength, Endurance, or Dexterity by 1.8x, 4x, or 6x depending on the HG tier.
     [/list]
 
     [h1] Compatibility [/h1]
@@ -23,6 +24,7 @@
     [list]
     [*] プレイヤーの運ステータスに応じて、装備品作成時にハイグレード（HG）ティアを適用します。
     [*] すでにティアレベルを持つ装備品には影響しません。
+    [*] 力・耐久・器用さなどの一部特性が、HGティアに応じて約1.8倍、4倍、6倍に強化されます。
     [/list]
 
     [h1] 互換性 [/h1]

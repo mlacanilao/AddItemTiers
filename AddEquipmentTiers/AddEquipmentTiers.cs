@@ -10,7 +10,7 @@ namespace AddItemTiers
     {
         internal const string Guid = "omegaplatinum.elin.additemtiers";
         internal const string Name = "Add Item Tiers";
-        internal const string Version = "1.1.0.0";
+        internal const string Version = "1.1.0.1";
     }
 
     [BepInPlugin(GUID: ModInfo.Guid, Name: ModInfo.Name, Version: ModInfo.Version)]
