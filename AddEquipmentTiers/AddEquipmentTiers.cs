@@ -10,13 +10,13 @@ namespace AddItemTiers
     {
         internal const string Guid = "omegaplatinum.elin.additemtiers";
         internal const string Name = "Add Item Tiers";
-        internal const string Version = "1.1.0.1";
+        internal const string Version = "1.2.0";
     }
 
     [BepInPlugin(GUID: ModInfo.Guid, Name: ModInfo.Name, Version: ModInfo.Version)]
     internal class AddEquipmentTiers : BaseUnityPlugin
     {
-        internal static AddEquipmentTiers Instance { get; private set; }
+        internal static AddEquipmentTiers Instance { get; private set; } = null!;
 
         private void Awake()
         {
@@ -62,7 +62,7 @@ namespace AddItemTiers
                 a: EClass.rnd(
                     a: EClass.rnd(
                         a: EClass.rnd(
-                            a: EClass.curve(a: luck, start: 100, step: 50, rate: 70) + 50
+                            a: EClass.curve(_a: luck, start: 100, step: 50, rate: 70) + 50
                         )
                     )
                 ) / 50,
